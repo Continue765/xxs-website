@@ -1,0 +1,24 @@
+# 网站仓库仅保存人工审核后的公开站点，不存报名/账号资料
+/local/
+/private/
+/output/
+/data/
+.env
+.env.*
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.sqlite*
+*.db
+*.log
+*.eml
+*.pem
+*.key
+credentials*.json
+accounts*.json
+participants*.json
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
