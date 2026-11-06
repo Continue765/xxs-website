@@ -3,10 +3,10 @@
   "CNAME": "1b67e8b1ff5a0339a24901dc3a5ce73bf0f56a85c38b84fb2d4535f755fe15cf",
   "assets/logo.png": "5c64df98b5c262377a879015a7c2882dc198b074ff0563b0da66acfe45d8d7b8",
   "assets/registration.png": "2ffd93c8423be4d4599254fc9be16716f41c287dd630904d0cf03accbd57a6e7",
-  "assets/site.css": "1a774e31a13323020d579fd518d3099fba34745a2ceaf732c9d01a0e3caff2ab",
+  "assets/site.css": "6038293003fd8cb799ab3bf78dab9306e10b428be0da7c03f7da9e343ce93bfb",
   "assets/site.js": "753319997738c7c25f04256363bd4eaa569a85601ae4844a25d65f6b166b4ebc",
   "build-meta.json": "bc66d04b2936c670db4a3ce01a6a825526f235aa4653aca041868016e1dde3d9",
-  "index.html": "49956d6aff38a704b1bddbf925f28495d44154ca3039c7becf021b7ab656a51c",
-  "manual.html": "f099bfd534a14629f2d7e1c5545089cde8174aec6bb2bd635ff00af1976c5a0e",
-  "results.html": "863ac14623edeae62aae3acd387fbb182ce39d61644dfc060501570ffd73edb1"
+  "index.html": "675bcb7c07a1b57f7f2941600a05620b10f732d7112ad0d2e802a5e03a45543a",
+  "manual.html": "ad56817baea12e1dcd7227ba2d0f8820373527a88e61df5a08ccff6c94c517c9",
+  "results.html": "680dc6470dc125ce6c0c3864ed838a7dbc0ae2c56243a621f804dca2ae131a16"
 }
