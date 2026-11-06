@@ -1,4 +1,4 @@
-/* Match the Typora export used by the 2026 Jieyang contest publicity pages. */
+/* Typography and article layout from the 2026 Jieyang publicity archive. */
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
@@ -10,43 +10,30 @@
   --code-block-bg-color: #0f111a;
 }
 
-* { box-sizing: border-box; }
-
+*, ::before, ::after { box-sizing: border-box; }
 html {
   font-size: 16px;
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
 }
-
 body {
   margin: 0;
   padding: 0 30px;
-  font-family: 'Lexend', 'Helvetica', 'SourceCodePro', 'NotoSansSC', sans-serif;
+  font-family: 'Lexend', 'Helvetica', 'SourceCodePro', 'NotoSansSC';
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: 0;
-  overflow-wrap: break-word;
 }
-
-::selection { background: var(--select-text-bg-color); text-shadow: none; }
-
-.shell,
-#main {
-  width: 100%;
+#write {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 30px 50px 20px;
+  overflow-wrap: break-word;
 }
-
-/* Nested sections share the reference document's single text column. */
-#main .shell { padding: 0; }
-
-.site-header { padding-top: 30px; text-align: center; }
-.brand { display: inline-block; vertical-align: middle; }
-.brand img { display: block; width: 180px; height: 83px; object-fit: contain; }
-
+::selection { background: var(--select-text-bg-color); text-shadow: none; }
 a { color: var(--deep-theme-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--deep-theme-color); outline-offset: 4px; }
@@ -54,89 +41,86 @@ a:focus-visible { outline: 2px solid var(--deep-theme-color); outline-offset: 4p
 h1, h2, h3, h4, h5, h6 {
   display: block;
   font-weight: bold;
+  white-space: pre-wrap;
   break-after: avoid-page;
   break-inside: avoid;
 }
-
 h1 { font-size: 1.8em; line-height: 110%; margin: .67em 0; }
 h2 { font-size: 1.5em; margin: .83em 0; }
 h3 { font-size: 1.17em; margin: 1em 0; }
 h4 { font-size: 1em; margin: 1.33em 0; }
 h5 { font-size: 1em; margin: 1.33em 0; color: #777777; }
 h6 { font-size: 1em; margin: 1.33em 0; color: #adadad; }
-
-.hero h1, .page-head h1, .section > h2, .landing h2,
-.handbook-content h2 { text-align: center; }
+.invitation h1, .invitation h2 { text-align: center; }
+/* The invitation separates sections with one blank paragraph in the export. */
+.invitation .section { padding-top: 32px; }
+.invitation .section > h2 { margin-top: .83em; }
+.logo { text-align: center; }
 
 p, blockquote, ul, ol, dl, table { margin: .5rem 0; }
 p { text-align: left; orphans: 4; }
 ul, ol { padding-left: 30px; }
 li { margin: 0; }
+li p { margin: .5rem 0; }
 li > :first-child, blockquote > :first-child { margin-top: 0; }
 li > :last-child, blockquote > :last-child { margin-bottom: 0; }
-
-.section, .landing h2:not(:first-child),
-.handbook-content h2:not(:first-child) { margin-top: 2.5rem; }
-.landing { margin-top: 2.5rem; }
-.eyebrow { display: none; }
-.muted { color: #777777; }
-
 hr { border: 0; border-top: 1px solid #e7e7e7; margin: 2rem 0; }
-
 img { max-width: 100%; height: auto; vertical-align: middle; }
 .registration { text-align: center; }
-.registration p { text-align: center; }
-.registration img { display: block; width: 30%; height: auto; margin: .5rem auto; }
+.registration img { width: 30%; }
 .poster { display: block; margin: 2rem auto; }
 
-/* Handbooks use the same flowing article and green table treatment. */
-.toc { margin: 20px 0; padding-bottom: 20px; text-align: center; }
-.toc a { display: inline-block; margin: 0 .6rem; }
-.handbook-content { min-width: 0; }
+.md-toc { margin: 20px 0 0; padding-bottom: 20px; font-size: .9rem; }
+.md-toc .toc-title { font-weight: bold; }
+.md-toc ul { list-style: none; margin: 0; padding-left: 2em; }
 table { width: 100%; border-collapse: collapse; border-spacing: 0; word-break: initial; }
 thead { background: var(--table-head-color); }
 tr:nth-child(even) { background: var(--table-even-row-color); }
 th, td { padding: 6px 13px; border: 1px solid var(--table-head-color); }
 th { text-align: center; }
 td { text-align: left; }
-
 blockquote {
   padding-left: 2rem;
   border-left: .2rem solid var(--side-bar-bg-color);
   color: #777777;
+  font-family: 'Lexend', 'NotoSansSC';
   font-size: .9rem;
 }
-
-code, pre { font-family: 'SourceCodePro', Consolas, Courier, 'NotoSansSC', monospace; }
-code { padding: .6px 4px; border-radius: 2px; background: #f1f1f1; font-size: .9em; }
-pre { overflow-x: auto; padding: .5em; border-radius: 3px; background: var(--code-block-bg-color); color: #a9b7c6; }
-pre code { padding: 0; background: transparent; color: inherit; }
+code, pre { font-family: 'SourceCodePro', Consolas, Courier, 'NotoSansSC'; }
+code {
+  padding: .6px 4px;
+  margin: 0 2px;
+  border-radius: 2px;
+  background: #f1f1f1;
+  color: var(--code-block-bg-color);
+  font-size: .9rem;
+}
+pre {
+  margin: .2em 0;
+  padding: .5em;
+  border-radius: 3px;
+  background: var(--code-block-bg-color);
+  color: #a9b7c6;
+  font-size: .9em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+pre code { padding: 0; margin: 0; background: transparent; color: inherit; font-size: inherit; }
 mark { padding: 0 4px; margin: 0 2px; border-radius: 2px; background: #c7ffe8; color: #000000; }
-
-.footer { padding-bottom: 20px; }
-.footer p, .footer nav { text-align: right; }
-.footer nav { margin-top: 1rem; }
-.footer nav a { display: inline-block; margin-left: 1rem; }
-
+.footer p { text-align: right; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 16px; top: 16px; z-index: 2; padding: 8px 12px; background: #ffffff; }
 [id] { scroll-margin-top: 1.5rem; }
-.disabled { color: #777777; }
+.eyebrow { display: none; }
 
 @media (max-width: 500px) {
   body { padding: 0; }
-  .shell, #main { padding-left: 20px; padding-right: 20px; }
-  #main .shell { padding: 0; }
-  .registration img { width: 50%; }
-  .handbook-content { overflow-wrap: anywhere; }
-  .handbook-content table { display: block; overflow-x: auto; }
+  .handbook table { display: block; overflow-x: auto; }
 }
-
 @media print {
   @page { size: A4; margin: 8mm 0; }
   html, body { font-size: 14px; }
   body { padding: 0; }
-  .skip-link, .toc, .footer nav { display: none; }
-  .shell, #main { max-width: 900px; }
+  .skip-link { display: none; }
   table, pre, img { break-inside: avoid; }
 }
