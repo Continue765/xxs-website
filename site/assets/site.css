@@ -31,7 +31,7 @@ body {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px 50px 20px;
+  padding: 48px 50px 32px;
   overflow-wrap: break-word;
 }
 ::selection { background: var(--select-text-bg-color); text-shadow: none; }
@@ -46,17 +46,26 @@ h1, h2, h3, h4, h5, h6 {
   break-after: avoid-page;
   break-inside: avoid;
 }
-h1 { font-size: 1.8em; line-height: 1.3; margin: .67em 0; }
-h2 { font-size: 1.375em; line-height: 1.4; margin: .9em 0; }
+h1 { font-size: 2em; line-height: 1.45; margin: .67em 0; letter-spacing: -.02em; }
+h2 { font-size: 1.5em; line-height: 1.4; margin: .9em 0; }
 h3 { font-size: 1.17em; margin: 1em 0; }
 h4 { font-size: 1em; margin: 1.33em 0; }
 h5 { font-size: 1em; margin: 1.33em 0; color: #777777; }
 h6 { font-size: 1em; margin: 1.33em 0; color: #adadad; }
 .invitation h1, .invitation h2 { text-align: center; }
-/* The invitation separates sections with one blank paragraph in the export. */
-.invitation .section { padding-top: 32px; }
-.invitation .section > h2 { margin-top: .83em; }
-.logo { text-align: center; }
+.invitation h1 { max-width: 740px; margin: 28px auto; text-wrap: balance; }
+.invitation-year { display: block; margin-bottom: 12px; font-size: .875rem; font-weight: 400; letter-spacing: .08em; color: #777777; }
+.invitation .prose { line-height: 1.8; }
+.invitation .section { padding-top: 48px; }
+.invitation .section > h2 { margin: 0 0 24px; }
+.invitation .section > ul > li + li { margin-top: 12px; }
+.logo { text-align: center; margin-bottom: 24px; }
+.logo img { width: 152px; }
+#info > ul { list-style: none; padding-left: 0; }
+#info > ul > li { padding: 12px 0; border-bottom: 1px solid var(--border-color); }
+#info > ul > li + li { margin-top: 0; }
+#info > ul > li:first-child { padding-top: 0; }
+#info > ul > li:last-child { border-bottom: 0; }
 
 p, blockquote, ul, ol, dl, table { margin: .5rem 0; }
 p { margin: .75rem 0; text-align: left; orphans: 4; }
@@ -68,7 +77,15 @@ li > :last-child, blockquote > :last-child { margin-bottom: 0; }
 hr { border: 0; border-top: 1px solid #e7e7e7; margin: 2rem 0; }
 img { max-width: 100%; height: auto; vertical-align: middle; }
 .registration { text-align: center; }
-.registration img { width: 30%; }
+.registration img { width: 208px; margin: 12px 0; }
+.registration [data-registration] {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--deep-theme-color);
+  border-radius: 3px;
+  font-weight: 600;
+}
+.registration [data-registration]:hover { background: var(--table-head-color); text-decoration: none; }
 .poster { display: block; margin: 2rem auto; }
 
 .md-toc { margin: 20px 0 0; padding-bottom: 20px; font-size: .9rem; }
@@ -91,25 +108,27 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
   border-right: 1px solid #e7e7e7;
 }
 .handbook .md-toc ul { padding-left: 0; margin-top: 12px; }
-.handbook .md-toc li + li { margin-top: 8px; }
-.handbook .md-toc a { display: block; color: #6b6b6b; }
+.handbook .md-toc li + li { margin-top: 0; }
+.handbook .md-toc a { display: block; padding: 6px 0; color: #6b6b6b; }
 .handbook .md-toc .toc-title { color: var(--text-color); }
 .handbook .md-toc a:hover,
 .handbook .md-toc a:focus-visible { color: var(--deep-theme-color); }
 .handbook-content { min-width: 0; }
 .handbook-content > ol > li + li { margin-top: .45rem; }
-.handbook-content > h2 { margin-top: 2rem; }
-.handbook-content > h1 { margin-top: .67em; }
+.handbook-content > h2 { margin: 44px 0 20px; }
+.handbook-content > h1 { margin: 12px 0 0; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); }
+.handbook-content > h1 + h2 { margin-top: 28px; }
 .table-scroll { width: 100%; overflow-x: auto; }
 .handbook-content .table-scroll table { display: table; min-width: 520px; }
 table { width: 100%; border-collapse: collapse; border-spacing: 0; word-break: initial; }
 thead { background: var(--table-head-color); }
 tr:nth-child(even) { background: var(--table-even-row-color); }
-th, td { padding: 9px 14px; border: 1px solid var(--border-color); }
-th { text-align: center; font-weight: 600; }
+th, td { padding: 12px 16px; border: 0; border-bottom: 1px solid var(--border-color); }
+th { text-align: left; font-weight: 600; }
 td { text-align: left; vertical-align: top; }
 .handbook-content th:first-child,
 .handbook-content td:first-child { white-space: nowrap; }
+td code { overflow-wrap: anywhere; }
 blockquote {
   padding-left: 2rem;
   border-left: .2rem solid var(--side-bar-bg-color);
@@ -140,7 +159,8 @@ pre {
 pre code { padding: 0; margin: 0; background: transparent; color: inherit; font-size: inherit; }
 mark { padding: 0 4px; margin: 0 2px; border-radius: 2px; background: #c7ffe8; color: #000000; }
 .registration > div + div { margin-top: 8px; }
-.footer p { text-align: right; font-size: .875rem; color: #777777; }
+.footer { margin-top: 48px; }
+.footer p { text-align: right; font-size: .8125rem; line-height: 1.8; color: #777777; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 16px; top: 16px; z-index: 2; padding: 8px 12px; background: #ffffff; }
 [id] { scroll-margin-top: 1.5rem; }
@@ -148,6 +168,11 @@ mark { padding: 0 4px; margin: 0 2px; border-radius: 2px; background: #c7ffe8; c
 
 @media (max-width: 500px) {
   body { padding: 0; }
+  #write { padding: 28px 22px 24px; }
+  h1 { font-size: 1.625em; }
+  h2 { font-size: 1.25em; }
+  .invitation .section { padding-top: 36px; }
+  .registration [data-registration] { padding: 10px 12px; font-size: .875rem; }
   .handbook table { display: block; overflow-x: auto; }
 }
 @media (max-width: 900px) {
