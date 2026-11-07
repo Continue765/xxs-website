@@ -114,10 +114,11 @@ img { max-width: 100%; height: auto; vertical-align: middle; }
 .handbook .md-toc a:hover,
 .handbook .md-toc a:focus-visible { color: var(--deep-theme-color); }
 .handbook-content { min-width: 0; }
-.prize-gallery { display: flex; justify-content: center; align-items: center; gap: 25px; margin: 24px 0; }
-.prize-gallery figure { width: 45%; min-width: 0; margin: 0; text-align: center; }
-.prize-gallery img { display: block; width: 100%; height: auto; }
-.prize-gallery figcaption { margin-top: 12px; font-size: .875rem; color: #6b6b6b; }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
 .handbook-content > ol > li + li { margin-top: .45rem; }
 .handbook-content > h2 { margin: 44px 0 20px; }
 .handbook-content > h1 { margin: 12px 0 0; padding-bottom: 24px; border-bottom: 1px solid var(--border-color); }
