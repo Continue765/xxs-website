@@ -202,3 +202,16 @@ mark { padding: 0 4px; margin: 0 2px; border-radius: 2px; background: #c7ffe8; c
   .handbook .md-toc { display: none; }
   table, pre, img { break-inside: avoid; }
 }
+
+/* Footnotes from the reference handbook. */
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+#write .md-footnote {
+	color: #777777;
+	background-color: #f7f7f7;
+}
