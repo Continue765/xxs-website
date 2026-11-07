@@ -9,7 +9,7 @@ from urllib.parse import unquote, urlsplit
 
 PUBLIC_FILES = {'index.html', 'manual.html', 'results.html', '.nojekyll', 'CNAME',
                 'build-meta.json', 'public-manifest.json', 'assets/site.css', 'assets/site.js',
-                'assets/registration.png'}
+                'assets/registration.png', 'assets/prize-bag.png', 'assets/prize-badge.png'}
 PUBLIC_FILES |= {f'assets/{kind}{ext}' for kind in ('logo', 'poster') for ext in ('.png', '.jpg', '.jpeg', '.webp')}
 PRIVATE_MARKERS = ('account_password', 'account_username', 'student_id', 'XXS_SMTP_PASSWORD',
                    '联系方式:邮箱', '联系方式:电话号码', 'BEGIN PRIVATE KEY')
